@@ -3,7 +3,8 @@
     import './index.css'
     import App from './App.jsx'
     import {BrowserRouter} from 'react-router-dom'
-  import StoreContextProvider from './Components/Context/storeContext.jsx'
+  import StoreContextProvider from './Components/Context/StoreContext'
+  
   
 
     createRoot(document.getElementById('root')).render(

@@ -1,12 +1,12 @@
     import React, { useContext } from 'react'
     import "./FoodItem.css"
 import { assets } from '../../assets/assets'
-import { storeContext } from '../Context/storeContext'
+import { StoreContext } from '../Context/StoreContext'
 
     const FoodItem = ({id,name,price,description,image}) => {
 
 
-        const {cartItems, addToCart,removeFromCart} = useContext(storeContext);
+        const {cartItems, addToCart,removeFromCart} = useContext(StoreContext);
 
         
     return (
