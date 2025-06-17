@@ -1,0 +1,243 @@
+                .navbar{
+                    padding: 20px 0px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+                .navbar .logo{
+                    width: 150px;
+                }
+                .navbar-menu{
+                    display: flex;
+                    list-style: none;
+                    gap: 20px;
+                    font-size: 18px;
+                    color: #49557e;
+                    
+                }
+                .navbar-right{
+                    display: flex;
+                    align-items: center;
+                    gap: 40px;
+                }
+                /* From Uiverse.io by joe-watson-sbf */ 
+                .btn {
+                    font-size: 17px;
+                    background: transparent;
+                    border: none;
+                    padding: 1em 1.5em;
+                    color: #49557e;
+                    text-transform: uppercase;
+                    position: relative;
+                    transition: 0.5s ease;
+                    cursor: pointer;
+                }
+                
+                .btn::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    height: 2px;
+                    width: 0;
+                    background-color: #ffc506;
+                    transition: 0.5s ease;
+                }
+                
+                .btn:hover {
+                    color: #1e1e2b;
+                    transition-delay: 0.5s;
+                }
+                
+                .btn:hover::before {
+                    width: 100%;
+                }
+                
+                .btn::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    height: 0;
+                    width: 100%;
+                    background-color: #ffc506;
+                    transition: 0.4s ease;
+                    z-index: -1;
+                }
+                
+                .btn:hover::after {
+                    height: 100%;
+                    transition-delay: 0.4s;
+                    color: aliceblue;
+                }
+
+
+
+                .navbar .active{
+                    padding-bottom: 2px;
+                    border-bottom: 2px solid #49557e ;
+                }
+                
+                .navbar li{
+                    cursor: pointer;
+                }
+
+            .navbar-seach-icon {
+                position: relative; 
+                display: inline-block; 
+            }
+            
+            .navbar-seach-icon .dot {
+                position: absolute;
+                width: 10px; 
+                height: 10px; 
+                background-color: tomato;
+                border-radius: 50%; 
+                top: -3px; 
+                right: -3px; 
+                display: block; 
+                z-index: 1; /
+            }
+            
+            
+            .navbar-seach-icon img {
+                width: 24px; 
+                height: 24px;
+            }
+
+            @media(max-width:1050px){
+                .navbar .logo{
+                    width: 140px;
+                }
+                .navbar-menu{
+                    gap: 20px;
+                    font-size: 17px;
+                }
+                .navbar-right{
+                    gap: 30px;
+                }
+                .navbar-right img{
+                    width: 22px;
+                }
+                .navbar-right button{
+                    padding: 8px 25px;
+                }
+            }
+
+
+            @media(max-width:900px){
+                .navbar .logo{
+                    width: 120px;
+                }
+                .navbar-menu{
+                    gap: 15px;
+                    font-size: 16px;
+                }
+                .navbar-right{
+                    gap: 20px;
+                }
+                .navbar-right img{
+                    width: 20px;
+                }
+                .navbar-right button{
+                    padding: 7px 20px;
+                    font-size: 15px;
+                }
+            }
+
+
+            @media(max-width:750px){
+
+                .navbar-menu{
+                    display: none;
+                }
+            }
+
+
+
+
+
+        /* ===== Switch Styles ===== */
+        .theme-switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 24px;
+            margin-left: 20px;
+        }
+        
+        .theme-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #49557e;
+            transition: .4s;
+            border-radius: 24px;
+        }
+        
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 20px;
+            width: 20px;
+            left: 2px;
+            bottom: 2px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        input:checked + .slider {
+            background-color: #ffc506;
+        }
+        
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+        
+        /* ===== Dark Mode Styles ===== */
+        .dark {
+            background-color: #212121; /* Used in Android/Google apps *//* This makes the page background dark */
+        }
+        
+        .dark .navbar {
+            background-color: transparent; /* Keeps navbar transparent */
+        }
+        
+        .dark .navbar-menu li {
+            color: #ffffff;
+        }
+        
+        .dark .navbar-menu .active {
+            border-bottom-color: #ffc506;
+            color: #ffc506;
+        }
+        
+        .dark .btn {
+            color: #ffffff;
+        }
+        
+        .dark .btn:hover {
+            color: #ffffff;
+        }
+        
+        .dark .btn::before,
+        .dark .btn::after {
+            background-color: #ffc506;
+        }
+        
+        /* Make sure body takes full dark background */
+        body.dark {
+            background-color: #121212;
+            min-height: 100vh; /* Ensures full page coverage */
+        }
