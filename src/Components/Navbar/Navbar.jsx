@@ -3,12 +3,12 @@ import './Navbar.css';
 import { assets } from '../../assets/assets';
 import Switch from './Switch';
 import { Link } from 'react-router-dom';
-import { StoreContext } from '../Context/storeContext';
+import { storeContext } from '../Context/storeContext';
 
 const Navbar = () => {
     const [menu, setMenu] = useState("home");
     const [isDarkMode, setIsDarkMode] = useState(false);
-    const {getTotalCartAmount}= useContext(StoreContext)
+    const {getTotalCartAmount}= useContext(storeContext)
 
     useEffect(() => {
         const savedTheme = localStorage.getItem('theme');
